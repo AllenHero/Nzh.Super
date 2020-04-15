@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Nzh.Super.IRepository\Nzh.Super.IRepository.csproj" />
+    <ProjectReference Include="..\Nzh.Super.IService\Nzh.Super.IService.csproj" />
+    <ProjectReference Include="..\Nzh.Super.Model\Nzh.Super.Model.csproj" />
+  </ItemGroup>
+
 </Project>
