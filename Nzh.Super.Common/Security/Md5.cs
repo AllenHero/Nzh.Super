@@ -11,7 +11,7 @@ namespace Nzh.Super.Common
         {
             MD5CryptoServiceProvider md5Hasher = new MD5CryptoServiceProvider();
             byte[] hashedDataBytes;
-            hashedDataBytes = md5Hasher.ComputeHash(Encoding.GetEncoding("gb2312").GetBytes(str));
+            hashedDataBytes = md5Hasher.ComputeHash(Encoding.UTF8.GetBytes(str));
             StringBuilder tmp = new StringBuilder();
             foreach (byte i in hashedDataBytes)
             {

@@ -4,6 +4,22 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Autofac.Extras.DynamicProxy" Version="5.0.0" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.9.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Nzh.Super.Common\Nzh.Super.Common.csproj" />
+    <ProjectReference Include="..\Nzh.Super.IService\Nzh.Super.IService.csproj" />
+    <ProjectReference Include="..\Nzh.Super.Model\Nzh.Super.Model.csproj" />
+    <ProjectReference Include="..\Nzh.Super.Repository\Nzh.Super.Repository.csproj" />
+    <ProjectReference Include="..\Nzh.Super.Service\Nzh.Super.Service.csproj" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="http://json.schemastore.org/appveyor" /></VisualStudio></ProjectExtensions>
+
 
 
 </Project>
