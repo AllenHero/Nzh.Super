@@ -109,7 +109,7 @@ namespace Nzh.Super
                 endpoints.MapAreaControllerRoute(
                      "Permissions_route", "Permissions", "Permissions/{controller=Index}/{action=Index}/{id?}");
                 endpoints.MapAreaControllerRoute(
-                 "SysSet_route", "Basic", "SysSet/{controller=Index}/{action=Index}/{id?}");
+                 "SysSet_route", "SysSet", "SysSet/{controller=Index}/{action=Index}/{id?}");
 
             });
         }
