@@ -47,7 +47,7 @@ namespace Nzh.Super
             services.AddSession(opts =>
             {
                 opts.IdleTimeout = TimeSpan.FromMinutes(60); //设置Session闲置超时时间(有效时间周期)
-                opts.Cookie.Name = "Nzh.Allen_cookie";
+                opts.Cookie.Name = "Nzh.Super_cookie";
                 opts.Cookie.HttpOnly = true;
 
             });
