@@ -41,14 +41,14 @@ namespace Nzh.Super.Controllers.SysSet
             {
                 logEntity.Status = true;
                 logEntity.Description = "密码修改成功";
-                logService.WriteDbLog(logEntity);
+                logService.WriteDbLog(logEntity, HttpContext.Connection.RemoteIpAddress.ToString(), HttpContext.Connection.RemoteIpAddress.ToString());
                 ViewBag.Msg = "密码修改成功";
             }
             else
             {
                 logEntity.Status = false;
                 logEntity.Description = "密码修改失败";
-                logService.WriteDbLog(logEntity);
+                logService.WriteDbLog(logEntity, HttpContext.Connection.RemoteIpAddress.ToString(), HttpContext.Connection.RemoteIpAddress.ToString());
                 ViewBag.Msg = "密码修改失败";
             }
             return View();

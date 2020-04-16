@@ -8,12 +8,12 @@ namespace Nzh.Super.Service
 {
     public class LogService : BaseService<LogModel>, ILogService
     {
-        public bool WriteDbLog(LogModel model)
+        public bool WriteDbLog(LogModel model, string ip, string iPAddressName)
         {
             model.Status = true;
             model.CreateOn = DateTime.Now;
-            //model.IPAddress = Net.Ip;
-            //model.IPAddressName = Net.GetLocation(model.IPAddress);
+            model.IPAddress = ip;
+            model.IPAddressName = iPAddressName;
             return baseRepository.Create(model) > 0 ? true : false;
         }
 

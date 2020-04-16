@@ -49,7 +49,7 @@ namespace Nzh.Super.Controllers
                 RealName = OperatorProvider.GetCurrent().RealName,
                 Status = true,
                 Description = "安全退出系统",
-            });
+            }, HttpContext.Connection.RemoteIpAddress.ToString(), HttpContext.Connection.RemoteIpAddress.ToString());
             OperatorProvider.WebHelper.ClearSession();
             OperatorProvider.RemoveCurrent();
             return RedirectToAction("Index", "Login");
@@ -96,7 +96,7 @@ namespace Nzh.Super.Controllers
                     logEntity.Status = true;
                     logEntity.Description = "登录成功";
                     logEntity.CreateBy = userEntity.Id;
-                    logService.WriteDbLog(logEntity);
+                    logService.WriteDbLog(logEntity, operatorModel.LoginIPAddress, operatorModel.LoginIPAddressName);
                     return Content(new AjaxResult { state = ResultType.success.ToString(), message = "登录成功。" }.ToJson());
                 }
                 else
@@ -110,7 +110,7 @@ namespace Nzh.Super.Controllers
                 logEntity.RealName = username;
                 logEntity.Status = false;
                 logEntity.Description = "登录失败，" + ex.Message;
-                logService.WriteDbLog(logEntity);
+                logService.WriteDbLog(logEntity, HttpContext.Connection.RemoteIpAddress.ToString(), HttpContext.Connection.RemoteIpAddress.ToString());
                 return Content(new AjaxResult { state = ResultType.error.ToString(), message = ex.Message }.ToJson());
             }
         }

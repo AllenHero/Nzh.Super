@@ -7,6 +7,6 @@ namespace Nzh.Super.IService
 {
     public interface ILogService : IBaseService<LogModel>
     {
-        bool WriteDbLog(LogModel model);
+        bool WriteDbLog(LogModel model, string ip, string iPAddressName);
     }
 }
