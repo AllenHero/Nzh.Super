@@ -10,8 +10,8 @@
             <div class="layui-card">
                 <div class="layui-card-header">修改密码</div>
                 <div class="layui-card-body" pad15>
-                    @*@using (Html.BeginForm("Index", "PassWord", new { area = "SysSet" }, FormMethod.Post, new { @class = "layui-form" }))
-                    {*@
+                    @using (Html.BeginForm("Index", "PassWord", new { area = "SysSet" }, FormMethod.Post, true, new { @class = "layui-form" }))
+                    {
                         @Html.AntiForgeryToken()
                         <div class="layui-form-item">
                             <label class="layui-form-label">用户名</label>
@@ -44,7 +44,7 @@
                                 <div class="div-msg fl" style="float:left;">@ViewBag.Msg</div>
                             </div>
                         </div>
-                    @*}*@
+                    }
                 </div>
             </div>
         </div>
