@@ -61,7 +61,7 @@ namespace Nzh.Super.Controllers
                 HomeTitle = Configs.GetValue("HomeTitle"),
                 MetaKey = Configs.GetValue("MetaKey"),
                 MetaDescribe = Configs.GetValue("MetaDescribe"),
-                CopyRight = Configs.GetValue("CopyRight")
+                //CopyRight = Configs.GetValue("CopyRight")
             };
         }
     }

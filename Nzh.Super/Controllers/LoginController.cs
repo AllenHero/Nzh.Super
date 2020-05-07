@@ -27,7 +27,7 @@ namespace Nzh.Super.Controllers
         public ActionResult Index()
         {
             ViewBag.Title = Configs.GetValue("SiteName");
-            ViewBag.CopyRight = Configs.GetValue("CopyRight");
+            //ViewBag.CopyRight = Configs.GetValue("CopyRight");
             ViewBag.SiteDomain = Configs.GetValue("SiteDomain");
             return View();
         }
